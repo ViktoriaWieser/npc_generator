@@ -42,5 +42,30 @@ NPC_Generator.AppDir/
 ```
 - build the project
 ```bash
-./appimagetool-x86_64.AppImage NPCGenerator.AppDir
+ ARCH=x86_64 ./appimagetool-x86_64.AppImage NPCGenerator.AppDir
+```
+- to make it executable
+```bash
+ ./NPCGenerator.AppImage --appimage-extract
+ cd squashfs-root
+ chmod +x AppRun
+```
+
+### 4. For Convenient Start
+- copy the .desktop file
+```bash
+ cp sqashfs-root/npc_generator.desktop ~/.local/share/applications/
+```
+- change the contents of the file to:
+```bash
+ [Desktop Entry]
+ Name=NPC Generator
+ Exec=~/squashfs-root/AppRun
+ Icon=/home/deck/squashfs-root/icon
+ Type=Application
+ Categories=Utility;
+```
+- make it executable
+```bash
+  chmod +x ~/.local/share/applications/npc_generator.desktop
 ```
