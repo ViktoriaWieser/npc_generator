@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=YourApp
+Exec=AppRun
+Icon=yourapp
+Type=Application
+Categories=Utility;
+Terminal=true
